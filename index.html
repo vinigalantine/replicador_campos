@@ -5,44 +5,8 @@
 	<title>Replicador de campos</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<style type="text/css">
-		input::-webkit-outer-spin-button,
-		input::-webkit-inner-spin-button {
-			-webkit-appearance: none;
-			margin: 0;
-		}
-
-		input[type=number] {
-			-moz-appearance:textfield;
-		}
-
-		body {
-			font-family: Montserrat;
-		}
-
-		.upflow {
-			background-color: #0C82F4;
-		}
-
-		.row_margin {
-			margin-top: 20px;
-		}
-
-		.jumbotron{
-			color: white;
-			text-align: center;
-			font-weight: bold;
-			border-radius: 0px;
-		}
-
-		.jumbotron small{
-			font-weight: bold;
-			font-style: italic;
-		}
-
-		p .error{
-			color: red;
-		}
 
 	</style>
 </head>
@@ -87,53 +51,9 @@
 		</div>
 		<div class="col-3"></div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		$(function(){
-			$(".chose_number_input").keypress(function (evt) {
-			    if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
-			    {
-			        evt.preventDefault();
-			    }
-			});			
-		})
-
-		function generateIputs(){
-			qnt_input = $('#number-inputs').val();
-			if (qnt_input && qnt_input != 0) {
-				for (var i = qnt_input; i > 0; i--) {
-					html = '<input class="form-control number_input input-sum" type="number" name="input-sum-'+i+'" id="input-sum-'+i+'" placeholder="Digite um número." required="true">'
-							+ '<p class="error"></p>';
-
-					$('#div-inputs').append(html);
-				}
-				$(".number_input").keypress(function (evt) {
-					if (evt.which != 8 && evt.which != 0 && evt.which == 189 && evt.which == 109 && evt.which < 48 || evt.which > 57)
-					{
-						evt.preventDefault();
-					}
-				});	
-				$('#div-btn-destroyInputs').show();
-				$('#div-btn-sum').show()
-			}
-		}
-
-		function destroyInputs(){
-			$('#div-btn-destroyInputs').hide();
-			$('#div-btn-sum').hide()
-			$('#div-inputs').html("");
-		}
-
-		function sumInputs(){
-			sum = 0;
-			$('.input-sum').each(function(idx, val){
-				number = parseInt(val.value);
-				sum += number;
-			});
-			alert("A soma é: "+sum);
-		}
-	</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" scr="js/script.js"></script>
 </body>
 </html>
