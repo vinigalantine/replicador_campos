@@ -12,6 +12,10 @@ body {
 	font-family: Montserrat;
 }
 
+button{
+	font-weight: bold!important;
+}
+
 .upflow {
 	background-color: #0C82F4;
 }
@@ -23,7 +27,6 @@ body {
 .jumbotron{
 	color: white;
 	text-align: center;
-	font-weight: bold;
 	border-radius: 0px;
 }
 
