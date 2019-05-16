@@ -1,0 +1,41 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance:textfield;
+}
+
+body {
+	font-family: Montserrat;
+}
+
+button{
+	font-weight: bold!important;
+}
+
+.upflow {
+	background-color: #0C82F4;
+}
+
+.row_margin {
+	margin-top: 20px;
+}
+
+.jumbotron{
+	color: white;
+	text-align: center;
+	border-radius: 0px;
+}
+
+.jumbotron small{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.error{
+	color: red;
+	text-align: center;
+}
